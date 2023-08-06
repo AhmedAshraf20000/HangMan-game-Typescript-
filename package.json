@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "typescript": "^5.1.6"
+  },
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "A simple hangman game",
+  "main": "./dist/main.js",
+  "author": "Ahmed Ashraf",
+  "license": "ISC"
+}

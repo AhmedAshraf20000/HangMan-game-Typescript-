@@ -11,9 +11,9 @@
     <header
       class="container flex justify-between font-sans text-xl opacity-80 mt-3 pb-3 border-black border-opacity-50 border-b-2 mx-auto"
     >
-      <div class="">Hangman</div>
-      <div class="">
-        The word is from section: <span class="text-red-600"></span>
+      <div>Hangman</div>
+      <div id="topic">
+        The word is from section: <span class="text-red-600 capitalize font-semibold"></span>
       </div>
     </header>
     <div
@@ -21,51 +21,59 @@
       class="container mt-2 flex bg-[#eee] mx-auto md:h-80 h-96 border-b-2 border-black border-opacity-50 justify-between gap-20 flex-wrap md:flex-nowrap md:gap-0 p-6"
     >
       <div id="hangman-draw" class="relative basis-full md:basis-1/2">
-        <div id="top-base" class="w-20 h-[3px] bg-black absolute left-10"></div>
-        <div id="bar" class="w-[3px] h-48 bg-black absolute left-10"></div>
-        <div id="btm-base" class="w-20 h-[3px] bg-black absolute top-48"></div>
+        <div id="top-base" class="w-20 h-[3px] bg-black absolute left-10 hidden"></div>
+        <div id="bar" class="w-[3px] h-48 bg-black absolute left-10 hidden"></div>
+        <div id="btm-base" class="w-20 h-[3px] bg-black absolute top-48 "></div>
         <div
           id="rope-holder"
-          class="w-[3px] h-6 absolute left-[120px] bg-black"
+          class="w-[3px] h-6 absolute left-[120px] bg-black hidden"
         ></div>
         <div
           id="rope"
-          class="absolute border-2 border-black border-dashed rounded-full w-12 h-12 left-[calc(120px-24px)] top-6"
+          class="absolute border-2 border-black border-dashed rounded-full w-12 h-12 left-[calc(120px-24px)] top-6 hidden"
         ></div>
         <div
           id="head"
-          class="absolute border-2 border-black rounded-full w-8 h-8 left-[calc(120px-16px)] top-8"
+          class="absolute border-2 border-black rounded-full w-8 h-8 left-[calc(120px-16px)] top-8 hidden"
         ></div>
         <div
           id="body"
-          class="absolute w-[3px] h-20 bg-black left-[120px] top-16"
+          class="absolute w-[3px] h-20 bg-black left-[120px] top-16 hidden"
         ></div>
         <div
           id="first-leg"
-          class="w-[3px] h-12 bg-black absolute left-[103px] top-[135px] rotate-[45deg]"
+          class="w-[3px] h-12 bg-black absolute left-[103px] top-[135px] rotate-[45deg] hidden"
         ></div>
         <div
           id="second-leg"
-          class="w-[3px] h-12 bg-black absolute left-[137px] top-[135px] -rotate-[45deg]"
+          class="w-[3px] h-12 bg-black absolute left-[137px] top-[135px] -rotate-[45deg] hidden"
         ></div>
         <div
           id="first-hand"
-          class="w-[3px] h-12 bg-black absolute left-[103px] top-[65px] rotate-[135deg]"
+          class="w-[3px] h-12 bg-black absolute left-[103px] top-[65px] rotate-[135deg] hidden"
         ></div>
         <div
           id="second-hand"
-          class="w-[3px] h-12 bg-black absolute left-[137px] top-[65px] -rotate-[135deg]"
+          class="w-[3px] h-12 bg-black absolute left-[137px] top-[65px] -rotate-[135deg] hidden"
         ></div>
       </div>
       <div
         id="letters-container"
-        class="basis-full md:basis-1/2 grid md:grid-cols-8 md:grid-rows-5 gap-3 md:gap-0 grid-cols-12 mt-28 md:mt-0"
+        class="basis-full md:basis-1/2 grid md:grid-cols-8 md:grid-rows-5 gap-3 md:gap-0 grid-cols-12 mt-28 md:mt-0 "
       ></div>
     </div>
     <div
       id="letters-spans"
       class="container mx-auto bg-[#eee] mt-2 justify-center py-4 space-x-2 flex"
     ></div>
+    <div id="success" class="text-center mt-3 space-y-3 hidden">
+      <div class="text-3xl text-green-600 font-bold">Well Done!</div>
+      <button class="text-white bg-slate-700 rounded-md px-3 py-2 hover:bg-green-600">Try again</button>
+    </div>
+    <div id="fail" class="text-center mt-3 space-y-3 hidden">
+      <div class="text-3xl text-red-500 font-bold">Failed,but nice try!</div>
+      <button class="text-white bg-slate-700 rounded-md px-3 py-2 hover:bg-red-500">Try again</button>
+    </div>
     <script src="./dist/main.js"></script>
   </body>
 </html>

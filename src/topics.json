@@ -1,0 +1,48 @@
+{
+    "topics": [
+        {
+            "name": "Animals",
+            "words": [
+                "elephant",
+                "tiger",
+                "giraffe",
+                "zebra",
+                "lion",
+                "monkey"
+            ]
+        },
+        {
+            "name": "Fruits",
+            "words": [
+                "apple",
+                "banana",
+                "orange",
+                "strawberry",
+                "mango",
+                "kiwi"
+            ]
+        },
+        {
+            "name": "Countries",
+            "words": [
+                "canada",
+                "france",
+                "japan",
+                "brazil",
+                "australia",
+                "germany"
+            ]
+        },
+        {
+            "name": "Sports",
+            "words": [
+                "soccer",
+                "basketball",
+                "tennis",
+                "swimming",
+                "volleyball",
+                "golf"
+            ]
+        }
+    ]
+}

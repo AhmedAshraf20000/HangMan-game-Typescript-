@@ -36,7 +36,7 @@ btn2.onclick = () => location.reload();
 function getData() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            let resp = yield (yield fetch("../src/topics.json")).json();
+            let resp = yield (yield fetch("../topics.json")).json();
             let topics = yield resp.topics;
             randomTopic = topics[Math.floor(Math.random() * topics.length)];
             let name = randomTopic.name;
